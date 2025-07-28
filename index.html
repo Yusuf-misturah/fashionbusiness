@@ -9,19 +9,29 @@
 <body>
     <header class="nav">
         <nav class="navbar">
-        <img src="./images/Black & White Modern Minimalist Fashion Designer Logo.gif" alt="logo" class="logo">
-           <h1 class="heading"> AYINKE_STITCHES</h1>
+            <img src="./images/Black & White Modern Minimalist Fashion Designer Logo.gif" alt="logo" class="logo">
+            <h1 class="heading"> AYINKE_STITCHES</h1>
             <ul class="navlinks">
-                <li><a href="#home">HOME</a></li>
+                <li>
+                    <a href="#home">HOME</a>
+                </li>
                 <li><a href="#aboutus">ABOUT US</a></li>
-                <li><a href="outfits">OUTFITS</a></li>
+                <li class="dropdown">
+                    <span class="spa">OUTFITS</span>
+                    <div class="dropdown-content">
+                        <p><a href="casual.html" target="_self">CASUAL OUTFITS</a></p>
+                        <p><a href="cooperate.html">COOPERATE WEARS</a></p>
+                        <p><a href="owanbe.html">OWANBE LOOK</a></p>
+                    </div>
+            </li>
+
                 <li><a href="enquiry">MAKE AN ENQUIRY</a></li>
             </ul>
-         
+
 
         </nav>
     </header>
-    <section >
+    <section>
 
     </section>
     <section>
@@ -55,7 +65,7 @@
             <span class="dot" onclick="currentSlide(3)"></span>
 
         </div>
-        <script>
+        <!-- <script>
             let slideIndex = 1;
             showSlides(slideIndex);
 
@@ -82,7 +92,7 @@
                 slides[slideIndex - 1].style.display = "block";
                 dots[slideIndex - 1].className += " active";
             }
-        </script>
+        </script> -->
 
     </section>
     <section>
@@ -92,6 +102,7 @@
     <footer>
         &copy AYINKE_STITCHES 2025
     </footer>
+    <a href="#" class="fa fa-facebook"></a>
 </body>
 
 </html>
