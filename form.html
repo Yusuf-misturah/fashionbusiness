@@ -1,10 +1,161 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>FORM</title>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
 
-    </body>
+<head>
+    <title>FORM</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* style inputs,textareas */
+        input[type=text],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        /* style the label to display next to the inputs */
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        /* style the submit button */
+        input[type=submit] {
+            background-color: #ccc;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        /* style the container */
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+        /* floating column for labels: 25% width */
+        .col-25 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* floating column for inputs: 75% width */
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* clear floats after the columns */
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* rensponsive layout - when the screen is less than 600px wide,
+        make the two columns stack on top of each other instead of next to each other 
+        @media screen and (max-width: 600px) {
+            .col-25, .col-75, input[type=submit]{
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+            
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <label for="Name">Full Name</label><br>
+        <input type="text" placeholder="Enter your name" name="Name" required><br>
+        <label for="Email">Email</label><br>
+        <input type="text" placeholder="Enter your email" name="Email" required><br>
+        <label>Your Whatsapp number.(please enter correctly or we may not be able to reach you)</label><br>
+        <input type="number" placeholder="+234" name="Phone" required><br>
+        <label>When do you need your dress(es) for</label><br>
+        <input type="datetime-local" name="date" required><br>
+        <label for="services">Which services are you interested in? *</label>
+        <input type="radio" -->
+    <div class="container">
+        <form action="action_page.php">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname"> Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="First name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Last name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Email">Email</label>
+                </div>
+                <div class="col-75">
+                    <input type="email" id="email" name="Email" placeholder="Your email..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Phone">Whatsapp Number(Please enter correctly or we may not be able to reach
+                        you.)</label>
+                </div>
+                <div class="col-75">
+                    <input type="tel" id="tel" name="Tel" placeholder="Phone Number...">
+                </div>
+            </div>
+            <div>
+                <p>Which services are you interested in?</p>
+                <input type="radio" id="casual" name="outfits" value="Casual Wear">
+                <label for="Casual Wear">Casual Wear</label><br>
+                <input type="radio" id="cooperate" name="outfits" value="Cooperate Wear">
+                <label for="Cooperate Wear">Cooperate Wear</label><br>
+                <input type="radio" id="owanbe" name="outfits" value="Owanbe">
+                <label for="Owanbe">Owanbe</label>
+            </div>
+            <div>
+                <p>Do you require shipping?</p>
+                <input type="radio" id="yes" name="answer" value="Yes">
+                <label for="Yes">Yes</label><br>
+                <input type="radio" id="no" name="answer" value="no">
+                <label for="No">No,i can pick up within Lagos,Nigeria</label>
+            </div>
+            <div class="row">
+                <p>Full delivery address if shipping is required,(please make sure you indicate your city
+                    and country)</p>
+                <div class="col-25">
+                    <label for="address">Address</label>
+                    <input type="text number" id="address" name="address" placeholder="Address..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="information">Any other information you might want to add</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="information" name="information" style="height: 200px">
+                    </textarea>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+
 </html>
