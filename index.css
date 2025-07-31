@@ -19,7 +19,7 @@ body {
     font-family: algerian;
     font-style: oblique;
     font-size: 200%;
-    color: #1800ad;
+    color: grey;
 }
 
 .nav {
@@ -40,12 +40,13 @@ body {
     justify-content: space-around;
     gap: 25px;
     list-style-type: none;
-    font-family: castellar;
+    /* font-family: castellar; */
 }
 
 a {
     text-decoration: none;
-    color: #1800ad;
+    color: grey;
+    /* text-transform: uppercase; */
 }
 
 .img {
@@ -56,7 +57,7 @@ a {
 /* how your link will come out */
 .spa {
     border: none;
-    color: #1800ad;
+    color: grey;
     cursor: pointer;
 }
 
@@ -76,31 +77,39 @@ a {
     z-index: 1;
 }
 
+.hr {
+    margin-top: 10px;
+}
+
+
 /* show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-    background-color: rgb(175, 190, 238);
+    background-color: dimgray;
 }
 
 /* change the b'c and color of the dropdown span when the dropdown content is shown */
 .dropdown:hover .spa {
-    background-color: rgb(175, 190, 238);
-    color: #849bff;
-    border: solid 2px darkblue;
+    background-color: dimgray;
+    color: grey;
+    border: none;
 }
 
 /* change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: royalblue;
+    background-color: lightgray;
 }
 
-.dropdown-content a {gap: 20px;
+.dropdown-content a {
+    gap: 25px;
     margin: auto;
-
+    font-size: medium;
+    /* font-family: castellar; */
 }
+
 
 .outline {
-    color: #1800ad;
+    color: grey;
     text-align: center;
 }
 
@@ -110,7 +119,6 @@ a {
     width: 40px;
     text-align: right;
     text-decoration: none;
-    margin: 5px 3px;
 }
 
 .fa:hover {
@@ -118,8 +126,8 @@ a {
 }
 
 .fa-facebook {
-    background-color: #1800ad;
-    color: #717171;
+    background-color: blue;
+    color: grey;
 }
 
 /*slideshow container */
@@ -143,7 +151,7 @@ a {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: navy;
+    color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -200,12 +208,11 @@ a {
     background-color: #717171;
 }
 
-fading animation .fade {
+/*fading animation .fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
-
-@keyframes fade {
+ @keyframes fade {
     from {
         opacity: .4
     }
@@ -213,9 +220,45 @@ fading animation .fade {
     to {
         opacity: 1
     }
+}*/
+#aboutus {
+    font-family: algerian;
+    text-align: center;
 }
 
-/* footer{
-    background-color: #020c45;
+.container {
+    display: flex;
     align-items: center;
-} */
+    text-align: justify;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: flex-end;
+    flex-direction: row;
+    text-align: center;
+}
+
+.container>.cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 250px;
+    margin-left: 250px;
+
+}
+
+.cont {
+    background-color: #717171;
+    padding: 50px 50px;
+    margin: 60px;
+    border-radius: 25px 20px;
+}
+footer {
+    margin-top: 10px;
+}
+/* styling my external pages */
+.cla{
+    text-align: center;
+    font-family: monospace;
+    font-size: calc(8.5vw);
+    color: grey;
+}
