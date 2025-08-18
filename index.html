@@ -2,15 +2,16 @@
 <html>
 
 <head>
-    <title>FASHIONDESIGN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYINKE_STITCHES</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header class="nav">
         <nav class="navbar">
-            <img src="./images/ayinkelogo.gif" alt="logo" class="logo">
+            <img src="./images/ayinkestitcheslogo (2).jpg" alt="logo" class="logo">
             <h1 class="heading"> AYINKE_STITCHES</h1>
             <ul class="navlinks">
                 <li>
@@ -23,17 +24,17 @@
                 <li class="dropdown">
                     <span class="spa">COLLECTIONS</span>
                     <div class="dropdown-content">
-                        <p class="hr"><a href="casual.html" target="_self">Casual</a></p>
                         <p class="hr"><a href="cooperate.html" target="_self">Cooperate</a></p>
+                        <p class="hr"><a href="casual.html" target="_self">Casual</a></p>
                         <p class="hr"><a href="owanbe.html" target="_self">Owanbe</a></p>
                     </div>
                 </li>
 
                 <li class="dropdown">
-                    <span class="spa">ENQUIRY</span>
+                    <span class="spa">CONTACT</span>
                     <div class="dropdown-content">
                         <!-- <p class="hr"><a href="#">Faq</a></p> -->
-                        <p class="hr"><a href="form.html" target="_self">Form</a></p>
+                        <p class="hr"><a href="form.html" target="_self">Enquiry</a></p>
                     </div>
                 </li>
             </ul>
@@ -41,108 +42,44 @@
 
         </nav>
     </header>
-    <section>
-        <h1 class="outline">MODEST OUTFITS FOR ANY OCCASSION</h1>
-        <div class="slide-container">
-            <div class="slide-fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="./images/abaya.jpg" alt="trouser" class="img">
-                <div class="text">TROUSER</div>
-            </div>
-            <div class="slide-fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="./images/bedspread.jpg" alt="bubu" class="img">
-                <div class="text">BUBU</div>
-            </div>
-            <div class="slide-fade">
-                <div>3 / 3</div>
-                <img src="./images/scrunchies.jpg" alt="gown" class="img">
-                <div class="text">GOWN</div>
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        </div>
-
-        <br>
-        <div style="text-align: center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-
-        </div>
-        <!-- <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
-
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-            }
-        </script> -->
-
-    </section>
     <hr>
-    <section>
-        <h2 id="aboutus">
-            <a href="#Ab" class="about">ABOUT US</a>
-        </h2>
-        <div class="container">
-            <h3 class="cont">
-                Founded in 2025, Ayinke Stitches inspires elegance, creativity among
-                people globally by making outfits dreams come to reality.<br> exercitationem recusandae
-                molestias,<br>
-                delectus praesentium aliquam voluptas fugiat, repellendus enim voluptates aspernatur sed!<br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nihil alias quae, reprehenderit<br>
-                deleniti doloribus aliquid eveniet natus ea,<br>
-                officiis commodi quas temporibus, porro aperiam nemo tempora dolores maiores dolore.<br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quidem nesciunt aperiam,<br>
-                accusantium officiis doloribus animi labore vitae, dignissimos nobis cumque unde dicta magnam<br>
-                repellat architecto blanditiis ipsa consequatur? Lorem ipsum dolor sit amet consectetur adipisicing
-                elit.<br>
-                Nam iste ipsam facere illo repellat dolores ab, sit mollitia provident,<br>
-                eaque nihil expedita aspernatur culpa magni placeat veritatis tenetur quidem voluptas?
-            </h3>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Style that Speaks</h1>
+            <p>Discover your unique look with our cutting-edge fashion designs.</p>
+            <a href="#about">Explore Now</a>
         </div>
     </section>
-    <hr>
-    <section class="contact">
-    <a href="https://www.facebook.com" class="fa fa-facebook"></a>
-    <a href="https://www.Whatsapp.com" class="fa fa-whatsapp"></a>
-    <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
-    <div class="co">
-        <h2 style="font-family: monospace;">CONTACT INFO</h2>
 
+    <section class="about" id="about">
+        <h2>About Our Brand</h2>
+        <p>
+            At StyleLab, we blend creativity with culture to deliver bold, expressive fashion that defines your
+            personality. From bespoke tailoring to contemporary streetwear, we craft styles that are as unique as you
+            are.
+        </p>
+    </section>
+
+    <hr>
+    <h2 class="contact">CONTACT INFO</h2>
+    <div class="icon-bar">
+        <a>10,ODUNSI STREET BARIGA,LAGOS,NIGERIA</a>
+        <a>yusufmisturah06@gmail.com</a>
+        <a>+2349025535034, +2348028778847</a>
     </div>
-            <div class="icon-bar">
-            <a href="#"><i class="fa fa-home">10,ODUNSI STREET BARIGA,LAGOS,NIGERIA</i></a>
-            <a href="#"><i class="fa fa-envelope">yusufmisturah06@gmail.com</i></a>
-            <a href="#"><i class="fa fa-phone">+2349025535034, +2348028778847</i></a>
-        </div>
-        <footer>
-            &copy AYINKE_STITCHES 2025
-        </footer>
-    </section>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <div class="social-buttons">
+        <a href="https://instagram.com" class="social-btn instagram" target="_blank"><i
+                class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/+2349025535034" class="social-btn whatsapp" target="_blank"><i
+                class="fab fa-whatsapp"></i></a>
+        <a href="https://linkedin.com" class="social-btn linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <footer>
+        &copy AYINKE_STITCHES 2025
+    </footer>
 
 </body>
 

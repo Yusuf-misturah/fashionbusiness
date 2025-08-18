@@ -5,8 +5,13 @@
 }
 
 body {
-    background-color: #ffff;
-    color: #000;
+    /* background-color: #ffff; */
+    /* color: #1b2e3c; */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+
 }
 
 .logo {
@@ -19,11 +24,15 @@ body {
     font-family: algerian;
     font-style: oblique;
     font-size: 200%;
-    color: #000;
+    color: #1b2e3c;
 }
 
 .nav {
-    background-color: #fff6ea;
+    background-color: rgb(249, 248, 248);
+    position: sticky;
+    top: 0;
+    align-items: center;
+    z-index: 1;
 }
 
 .navbar {
@@ -31,7 +40,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 20px 15px;
+    padding: 1px;
 }
 
 .navlinks {
@@ -40,28 +49,24 @@ body {
     justify-content: space-around;
     gap: 25px;
     list-style-type: none;
-    /* font-family: castellar; */
+    color: #1b2e3c;
 }
 
 a {
     text-decoration: none;
-    color: #000;
-    /* text-transform: uppercase; */
+    color: #1b2e3c;
 }
-a :hover{
-    background-color: #000;
+
+a :hover {
+    background-color: rgb(249, 248, 248) ;
     color: #ffff;
 }
 
-.img {
-    width: 100%;
-
-}
 
 /* how your link will come out */
 .spa {
     border: none;
-    color: #000;
+    color: #0C0C1E;
     cursor: pointer;
 }
 
@@ -89,216 +94,246 @@ a :hover{
 /* show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-    background-color: dimgray;
+    background-color: #f9f8f8e4;
 }
 
 /* change the b'c and color of the dropdown span when the dropdown content is shown */
 .dropdown:hover .spa {
-    background-color: dimgray;
-    color: grey;
+    color: rgb(45, 43, 43);
     border: none;
 }
 
 /* change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: lightgray;
+    background-color: #f9f8f8e4;
 }
 
 .dropdown-content a {
-    gap: 25px;
+    gap: 15px;
     margin: auto;
     font-size: medium;
-    /* font-family: castellar; */
 }
 
+/* font-family: castellar;  */
 
-.outline {
-    color: #fff6ea;
-    text-align: center;
-}
-
-.fa {
-    padding: 10px;
-    font-size: 20px;
-    width: 40px;
-    text-align: right;
-    text-decoration: none;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-    background-color: blue;
-    color: grey;
-}
-.fa-whatsapp {
-    background-color: green;
-    color: #f2f2f2;
-}
-.fa-linkedin {
-    background-color: black;
-    color: bisque;
-}
-
-/*slideshow container */
-.slide-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
-
-/*hide the image by default */
-.slide-fade {
-    display: none;
-}
-
-/* next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* on hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* the dots/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #ffff;
-    border-radius: 50%;
-    display: inline-block;
-    transform: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-    background-color: #ffff;
-}
-
-/*fading animation .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
- @keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}*/
 #aboutus {
     font-family: algerian;
     text-align: center;
+    margin-top: 50px;
 }
 
-.container {
+/*  */
+
+.hero {
+    background-image: url(images/owanbe4.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     display: flex;
     align-items: center;
-    text-align: justify;
-    margin: 0 auto;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 80px;
+    
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    justify-content: flex-end;
-    flex-direction: row;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    color: #fff;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-content a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.hero-content a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+section.about {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
     text-align: center;
 }
 
-.container>.cont {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-right: 250px;
-    margin-left: 250px;
-
+section.about h2 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
 }
 
-.cont {
-    background-color: #fff6ea;
-    padding: 50px 50px;
-    margin: 60px;
-    border-radius: 25px 20px;
+section.about p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: auto;
 }
-footer {
-    margin-top: 20px;
+
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
 }
-/* styling my external pages */
-.cla{
+
+/*  */
+.co {
+    background-color: rgb(249, 248, 248);
+}
+
+.contact {
     text-align: center;
     font-family: monospace;
-    font-size: calc(8.5vw);
-    color: #000;
+    font-size: 30px;
+    margin-top: 50px;
 }
-.gallery{
-    padding:5%;
-    border-radius: 20% 15%;
-    margin-right: 10px;
-    margin-left: 20px;
-    margin-top: 5px;
-    margin-bottom: 10px; 
-    width: 100%;
+
+/* how the social media buttons will appearon the page */
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
-/*  */
-.contact{
-    justify-content: space-around;
+
+/*transition when you hover on the buttons ,the background color will fade */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #ffff;
+    color: #ffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 25%;
+    text-decoration: none;
+    font-size: 25px;
+    margin-bottom: 50px;
 }
-.co{
-    margin: 20px;
+
+.social-btn.instagram {
+    background-color: #f3e3e2;
+    color: #ffff;
 }
+
+.social-btn.whatsapp {
+    background-color: green;
+    color: #ffff;
+}
+
+.social-btn.linkedin {
+    background-color: #0077b5;
+    color: #ffff;
+}
+
+.pics {
+    float: right;
+    width: 20%;
+}
+
 .icon-bar {
-  width: 100%; /* Set a specific width */
+    width: 100%;
+    /* Set a specific width */
 }
 
 .icon-bar a {
-  display:block; /* Make the links appear below each other instead of side-by-side */
-  text-align: center; /* Center-align text */
-  padding: 50px; /* Add some padding */
-  transition: all 0.3s ease; /* Add transition for hover effects */
-  color:#000; /* White text color */
-  font-size: 20px; /* Increased font-size */
+    display: block;
+    /* Make the links appear below each other instead of side-by-side */
+    text-align: center;
+    /* Center-align text */
+    padding: 50px;
+    /* Add some padding */
+    transition: all 0.3s ease;
+    /* Add transition for hover effects */
+    color: #4b0000;
+    /* White text color */
+    font-size: 20px;
+    /* Increased font-size */
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+/* styling my external pages */
+.cla {
+    text-align: center;
+    font-family: monospace;
+    font-size: calc(6.5vw);
+    color: #1b2e3c;
+    margin-bottom: 50px;
+}
+
+.gallery {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.fig {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.img-cont {
+    margin-right: 20px;
+}
+
+.img {
+    border: 2px solid #1b2e3c;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.img:hover {
+    transform: scale(1.3);
 }
