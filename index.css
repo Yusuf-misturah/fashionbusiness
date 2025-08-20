@@ -38,15 +38,16 @@ body {
     position: sticky;
     top: 0;
     align-items: center;
-    z-index: 1;
+    z-index: 10;
 }
 
 .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0.0625rem;
+    position: relative;
 }
 
 .navlinks {
@@ -79,17 +80,29 @@ a :hover {
 /* the container<div> needed to position the dropdown content */
 .dropdown {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 /* dropdown content hidden by default */
 .dropdown-content {
     display: none;
     position: absolute;
+    top: 100%;
+    left: 0;
     min-width: 100%;
     box-shadow: 12.5rem;
     padding: 0.9375rem 1.25rem;
     z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Toggle dropdown on click */
+.dropdown-content.show {
+  display: block;
 }
 
 .hamburger {
@@ -140,16 +153,20 @@ a :hover {
         font-size: 150%;
     }
 
-    .dropdown:hover .dropdown-content {
-        display: none; /* disable hover dropdown on mobile */
-    }
+   /* .dropdown:hover .dropdown-content {
+         display: none;  disable hover dropdown on mobile 
+    }*/
 
     .dropdown-content {
         position: static;
-        display: block;
+        display: none;
         background-color: transparent;
         box-shadow: none;
         padding: 0;
+    }
+
+    .dropdown-content.show{
+        display: block;
     }
 
     .dropdown .spa {
@@ -169,7 +186,7 @@ a :hover {
 
 /* show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+    /* display: block; */
     background-color: #f9f8f8e4;
 }
 
