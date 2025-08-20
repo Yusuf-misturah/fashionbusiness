@@ -2,14 +2,34 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYINKE_STITCHES</title>
     <link rel="stylesheet" href="index.css">
     </head>
 
+    <style>
+    /* responsiveness */
+
+/* For tablets and smaller 
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* For phones 
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+} */
+</style>
+
 <body>
     <header class="nav">
         <nav class="navbar">
-            <img src="./images/ayinkestitcheslogo (2).jpg" alt="logo" class="logo">
+            <img src="./images/fashiondesignlogo.jpg" alt="logo" class="logo">
             <h1 class="heading"> AYINKE_STITCHES</h1>
             <ul class="navlinks">
                 <li>
@@ -25,14 +45,11 @@
                     </div>
                 </li>
 
-                <li class="dropdown">
-                    <span class="spa">CONTACT</span>
-                    <div class="dropdown-content">
-                        <!-- <p class="hr"><a href="#">Faq</a></p> -->
-                        <p class="hr"><a href="form.html" target="_self">Enquiry</a></p>
-                    </div>
+                 <li>
+                    <a href="form.html" target="_self">ENQURIY</a>
                 </li>
             </ul>
+            <div class="hamburger" id="hamburger">&#9776;</div>
         </nav>
     </header>
     <section class="gallery">
@@ -61,8 +78,6 @@
                 </figure>
             </div>
         </div>
-
-            <section class="gallery">
         <div class="fig">
                         <div class="img-cont">
                 <figure>
@@ -87,9 +102,7 @@
                 </figure>
             </div>
         </div>
-        </section>
         
-            <section class="gallery">
         <div class="fig">
                         <div class="img-cont">
                 <figure>
@@ -114,9 +127,7 @@
                 </figure>
             </div>
         </div>
-        </section>
         
-            <section class="gallery">
         <div class="fig">
                         <div class="img-cont">
                 <figure>
@@ -145,6 +156,16 @@
                 <footer>
             &copy AYINKE_STITCHES 2025
         </footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navlinks');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
 </body>
 
 </html>

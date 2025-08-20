@@ -2,14 +2,33 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYINKE_STITCHES</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+    /* responsiveness */
+
+/* For tablets and smaller 
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* For phones 
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+} */
+</style>
 </head>
 
 <body>
     <header class="nav">
         <nav class="navbar">
-            <img src="./images/ayinkestitcheslogo (2).jpg" alt="logo" class="logo">
+            <img src="./images/fashiondesignlogo.jpg" alt="logo" class="logo">
             <h1 class="heading"> AYINKE_STITCHES</h1>
             <ul class="navlinks">
                 <li>
@@ -24,12 +43,8 @@
                         <p class="hr"><a href="owanbe.html" target="_self">Owanbe</a></p>
                     </div>
                 </li>
-
-                <li class="dropdown">
-                    <span class="spa">CONTACT</span>
-                    <div class="dropdown-content">
-                        <p class="hr"><a href="form.html" target="_self">Enquiry</a></p>
-                    </div>
+                 <li>
+                    <a href="form.html" target="_self">ENQURIY</a>
                 </li>
             </ul>
         </nav>
@@ -195,6 +210,16 @@
                 <footer>
             &copy AYINKE_STITCHES 2025
         </footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navlinks');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
 </body>
 
 </html>

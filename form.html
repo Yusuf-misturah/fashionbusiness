@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYINKE_STITCHESFORM</title>
     <link rel="stylesheet" href="index.css">
     <style>
@@ -13,8 +15,8 @@
 
         .fil {
             text-align: center;
-            margin-top: 30px;
-            font-size: 60px;
+            margin-top: 1.875rem;
+            font-size: 3.75rem;
         }
 
         .sec1 {
@@ -23,8 +25,8 @@
         }
 
         .Container {
-            margin-left: 270px;
-            margin-top: 30px;
+            margin-left: 16.875rem;
+            margin-top: 1.875rem;
         }
 
         .link {
@@ -35,17 +37,17 @@
         /* style inputs,textareas */
         input[type=text],
         textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            max-width: 100%;
+            padding: 0.75rem;
+            border: 0.0625rem solid #ccc;
+            border-radius: 0.25rem;
             box-sizing: border-box;
             resize: vertical;
         }
 
         /* style the label to display next to the inputs */
         label {
-            padding: 12px 12px 12px 0;
+            padding: 0.75rem 0.75rem 0.75rem 0;
             display: inline-block;
         }
 
@@ -53,9 +55,9 @@
         input[type=submit] {
             background-color: #ccc;
             color: #fff;
-            padding: 12px 20px;
+            padding: 0.75rem 1.25rem;
             border: none;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             cursor: pointer;
             float: right;
         }
@@ -66,14 +68,15 @@
         .col-25 {
             float: left;
             width: 75%;
-            margin-top: 6px;
+            margin-top: 0.375rem;
+            padding-bottom: 1.25rem;
         }
 
         /* floating column for inputs: 75% width */
         .col-75 {
             float: left;
             width: 75%;
-            margin-top: 6px;
+            margin-top: 0.375rem;
         }
 
         /* clear floats after the columns */
@@ -82,13 +85,30 @@
             display: table;
             clear: both;
         }
+
+    /* responsiveness */
+
+/* For tablets and smaller 
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* For phones 
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+} */
+
     </style>
 </head>
 
 <body>
     <header class="nav">
         <nav class="navbar">
-            <img src="./images/ayinkestitcheslogo (2).jpg" alt="logo" class="logo">
+            <img src="./images/fashiondesignlogo.jpg" alt="logo" class="logo">
             <h1 class="heading"> AYINKE_STITCHES</h1>
             <ul class="navlinks">
                 <li>
@@ -104,12 +124,8 @@
                     </div>
                 </li>
 
-                <li class="dropdown">
-                    <span class="spa">CONTACT</span>
-                    <div class="dropdown-content">
-                        <!-- <p class="hr"><a href="#">FAQ</a></p> -->
-                        <p class="hr"><a href="form.html" target="_self">Enquiry</a></p>
-                    </div>
+                 <li>
+                    <a href="form.html" target="_self">ENQURIY</a>
                 </li>
             </ul>
 
@@ -213,7 +229,7 @@
                         <textarea id="information" name="information" style="height: 200px">
                     </textarea>
                         <div class="row">
-                            <input type="submit" value="Submit">
+                            <input type="submit" value="Submit" id="btn">
                         </div>
                     </div>
             </form>
@@ -239,6 +255,16 @@
             &copy AYINKE_STITCHES 2025
         </footer>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("myForm");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Stop actual form submission
+      alert("Form submitted! (Handled by JavaScript)");
+    });
+  });
+</script>
 
 </body>
 
