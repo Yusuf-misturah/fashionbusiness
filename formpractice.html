@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Form Card</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      padding: 2rem;
+      width: 350px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+      text-align: left;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    .form-group input:focus {
+      border: 1px solid #ff6b6b;
+    }
+
+    .btn {
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #e05555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Contact Us</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <input type="text" id="message" placeholder="Enter your message" required>
+      </div>
+
+      <button type="submit" class="btn" id="btn">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYINKE_STITCHESFORM</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .fil {
+            text-align: center;
+            margin-top: 1.875rem;
+            font-size: 3.75rem;
+        }
+
+        .sec1 {
+            background-color: #0c0c1e;
+            color: white ;
+        }
+
+        .Container {
+            margin-left: 16.875rem;
+            margin-top: 1.875rem;
+        }
+
+        .link {
+            text-decoration: none;
+            color: gainsboro
+        }
+
+        /* style inputs,textareas */
+        input[type=text],
+        textarea {
+            max-width: 100%;
+            padding: 0.75rem;
+            border: 0.0625rem solid #ccc;
+            border-radius: 0.25rem;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        /* style the label to display next to the inputs */
+        label {
+            padding: 0.75rem 0.75rem 0.75rem 0;
+            display: inline-block;
+        }
+
+        /* style the submit button */
+        input[type=submit] {
+            background-color: #ccc;
+            color: #fff;
+            padding: 0.75rem 1.25rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            float: right;
+        }
+
+        /* style the container */
+
+        /* floating column for labels: 25% width */
+        .col-25 {
+            float: left;
+            width: 75%;
+            margin-top: 0.375rem;
+            padding-bottom: 1.25rem;
+        }
+
+        /* floating column for inputs: 75% width */
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 0.375rem;
+        }
+
+        /* clear floats after the columns */
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    /* responsiveness */
+
+/* For tablets and smaller 
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* For phones 
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+} */
+
+    </style>
+</head>
+
+<body>
+    <header class="nav">
+        <nav class="navbar">
+            <img src="./images/fashiondesignlogo (2).jpg" alt="logo" class="logo">
+            <h1 class="heading"> AYINKE_STITCHES</h1>
+            <ul class="navlinks">
+                <li>
+                    <a href="index.html" target="_self">HOME</a>
+                </li>
+                 <li><a href="index.html">ABOUT US</a></li>
+                <li class="dropdown">
+                    <span class="spa">COLLECTIONS</span>
+                    <div class="dropdown-content">
+                        <p class="hr"><a href="casual.html" target="_self">Casual</a></p>
+                        <p class="hr"><a href="cooperate.html" target="_self">Corporate</a></p>
+                        <p class="hr"><a href="owanbe.html" target="_self">Owanbe</a></p>
+                    </div>
+                </li>
+
+                 <li>
+                    <a href="form.html" target="_self">ENQURIY</a>
+                </li>
+            </ul>
+
+
+        </nav>
+    </header>
+    <h2 class="fil">FILL THIS FORM</h2>
+
+    <section class="sec1">
+        <div class="Container">
+            <form >
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname"> Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="First name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Last name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="Email">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" id="email" name="Email" placeholder="Your email..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="Phone">Whatsapp Number(Please enter correctly or we may not be able to reach
+                            you.)</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="tel" id="tel" name="Tel" placeholder="Phone Number...">
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <p>Which services are you interested in?</p><br>
+                            Dropdown
+          <label for="dropdown"> * Cooperate </label><br>
+          <select id="dropdown" name="referral">
+            <option value="Expert">Cooperate Gown</option>
+            <option value="Intermidiary">Blazers</option>
+            <option value="Beginner"> Shirt & Cooperate Trousers</option>
+            </select><br>
+                    Dropdown
+          <label for="dropdown"> * Casual </label><br>
+          <select id="dropdown" name="referral">
+            <option value="Top & Trouser">Top & Trouser</option>
+            <option value="Short Gown">Short Gown</option>
+            <option value="Expert">Skirt & Top</option>
+            </select><br>
+                     Dropdown
+          <label for="dropdown"> * Owanbe </label><br>
+          <select id="dropdown" name="referral">
+            <option value=" Iro & Buba "> Iro & Buba </option>
+            <option value="Padded Gown">Padded Gown</option>
+            <option value="Bubu">Bubu</option>
+            </select><br>
+                </div>
+                <br>
+                <div>
+                    <p>Size (please indicate your sizes here)</p>
+                    <input type="radio" id="XL" name="sizes" value="XL">
+                    <label for="Casual Wear">XL </label><br>
+                    <input type="radio" id="L" name="sizes" value="L">
+                    <label for="Cooperate Wear">L</label><br>
+                    <input type="radio" id="M" name="sizes" value="M">
+                    <label for="Owanbe">M</label><br>
+                    <input type="radio" id="S" name="sizes" value="S">
+                    <label for="Owanbe">S</label><br>
+                    <input type="radio" id="XS" name="sizes" value="XS">
+                    <label for="Owanbe">XS</label><br>
+                </div>
+                <div>
+                    <p>Do you require shipping?</p>
+                    <input type="radio" id="yes" name="answer" value="Yes">
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="no" name="answer" value="no">
+                    <label for="No">No,i can pick up within Lagos,Nigeria</label>
+                </div>
+                <div class="row">
+                    <p>Full delivery address if shipping is required,(please make sure you indicate your city
+                        and country)</p>
+                    <div class="col-25">
+                        <label for="address">Address</label>
+                        <input type="text number" id="address" name="address" placeholder="Address..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="information">Any other information you might want to add</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="information" name="information" style="height: 200px">
+                    </textarea>
+                        <div class="row">
+                            <input type="submit" value="Submit" id="btn">
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </section>
+    <hr>
+
+    <div class="co">
+        <h2 class="contact">CONTACT INFO</h2>
+    <div class="icon-bar">
+        <a>10,ODUNSI STREET BARIGA,LAGOS,NIGERIA</i></a>
+        <a>yusufmisturah06@gmail.com</i></a>
+        <a>+2349025535034, +2348028778847</i></a>
+    </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <div class="social-buttons">
+    <a href="https://instagram.com" class="social-btn instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/+2349025535034" class="social-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://linkedin.com" class="social-btn linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+        <footer>
+            &copy AYINKE_STITCHES 2025
+        </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("myForm");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Stop actual form submission
+      alert("Form submitted! (Handled by JavaScript)");
+    });
+  });
+</script>
+
+</body>
+
+</html> -->
