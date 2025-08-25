@@ -66,9 +66,9 @@ a {
     color: #1b2e3c;
 }
 
-a :hover {
+a:hover {
     background-color: rgb(249, 248, 248) ;
-    color: #ffff;
+    color: #0C0C1E;
 }
 
 
@@ -114,54 +114,15 @@ a :hover {
     color: #0C0C1E;
 }
 
-/* navbar Responsive styles */
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 1rem;
-    }
-
-
-    .navlinks {
-        display: none;
-        flex-direction: column;
-        background-color: rgb(249, 248, 248);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .navlinks.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
-    .dropdown-content {
-        position: static;
-       box-shadow: none;
-       padding: 0.5rem 1rem;
-    }
-
-    .dropdown-content a{
-        margin-left: 1rem;
-    }
-
-    .heading {
-        flex: 1;
-        text-align: center;
-        font-size: 150%;
-    }
-}
-
 .hr {
     margin-top: 0.625rem;
 }
 
+.dropdown-content {
+    position: static;
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+    }
 
 /* show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -186,6 +147,11 @@ a :hover {
     font-size: medium;
 }
 
+/* .navlinks.active .dropdown-content a:hover{
+    background-color: transparent;
+    color: #0C0C1E;
+} */
+
 /* font-family: castellar;  */
 
 #aboutus {
@@ -197,7 +163,7 @@ a :hover {
 /*  */
 
 .hero {
-    background-image: url(images/owanbe14.jpg);
+    background-image: url(images/owanbe6.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -208,6 +174,7 @@ a :hover {
     position: relative;
     text-align: center;
     overflow: hidden;
+    /* z-index: initial; */
     /* margin-top: 3.125rem; */
     
 }
@@ -228,6 +195,7 @@ a :hover {
     color: #fff;
     max-width: 37.5rem;
     padding: 0 1.25rem;
+    transform: translateY(-80px);
 }
 
 .hero-content h1 {
@@ -369,6 +337,7 @@ footer {
     font-size: calc(6.5vw);
     color: #1b2e3c;
     margin-bottom: 3.125rem;
+    z-index: 10;
 }
 
 .gallery {
@@ -424,6 +393,69 @@ footer {
     --spacing: 10px;
     }
 }
+
+/* Tablets */
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh; /* fill screen but not too tall */
+    }
+    .hero-content {
+        transform: translateY(-40px);
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .hero {
+        height: 90vh; /* slightly shorter */
+    }
+    .hero-content {
+        transform: translateY(-20px);
+    }
+    .cla{
+        z-index: 10;
+    }
+}
+
+
+/* navbar Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+
+    .navlinks {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(249, 248, 248);
+        color: #0C0C1E;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        /* z-index: 1000; */
+    }
+
+    .navlinks.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+  .heading {
+        flex: 1;
+        text-align: center;
+        font-size: 150%;
+    }
+}
+
 /* responsiveness
 
 /* For tablets and smaller 
