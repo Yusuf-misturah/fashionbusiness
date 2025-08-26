@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     submitButton.addEventListener("click", function (event) {
       event.preventDefault();
       console.log("Submit button clicked!");
-      alert("Form submitted successfully!");
+      alert("Thanks contacting AYINKE_STITCHES Form submitted successfully!");
     });
   }
 });

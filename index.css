@@ -11,8 +11,6 @@
 }
 
 body {
-    /* background-color: #ffff; */
-    /* color: #1b2e3c; */
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
@@ -34,7 +32,7 @@ body {
 }
 
 .nav {
-    background-color: rgb(249, 248, 248);
+    background-color: rgb(243, 243, 243);
     position: sticky;
     top: 0;
     align-items: center;
@@ -67,7 +65,7 @@ a {
 }
 
 a:hover {
-    background-color: rgb(249, 248, 248) ;
+    background-color: rgb(249, 248, 248);
     color: #0C0C1E;
 }
 
@@ -82,7 +80,6 @@ a:hover {
 /* the container<div> needed to position the dropdown content */
 .dropdown {
     position: relative;
-    /* display: inline-block;  */
 }
 
 /* dropdown content hidden by default */
@@ -94,23 +91,29 @@ a:hover {
     min-width: 100%;
     box-shadow: 12.5rem;
     padding: 0.9375rem 1.25rem;
-    z-index: 1;
+    z-index: 20;
+}
+
+/* show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #f9f8f8e4;
 }
 
 .dropdown-content a {
-  display: block;
-  margin-bottom: 0.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 /* Toggle dropdown on click */
 .dropdown-content.show {
-  display: block;
+    display: block;
 }
 
 .hamburger {
     display: none;
     font-size: 1.75rem;
-    cursor:pointer;
+    cursor: pointer;
     color: #0C0C1E;
 }
 
@@ -118,41 +121,28 @@ a:hover {
     margin-top: 0.625rem;
 }
 
-.dropdown-content {
+/* .dropdown-content {
     position: static;
     box-shadow: none;
     padding: 0.5rem 1rem;
-    }
+} */
 
-/* show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-     display: block; 
-    background-color: #f9f8f8e4;
-}
-
-/* change the b'c and color of the dropdown span when the dropdown content is shown */
+/* change the b'c and color of the dropdown span when the dropdown content is shown 
 .dropdown:hover .spa {
     color: rgb(45, 43, 43);
     border: none;
 }
 
-/* change color of dropdown links on hover */
+/* change color of dropdown links on hover 
 .dropdown-content a:hover {
     background-color: #f9f8f8e4;
-}
+} */
 
-.dropdown-content a {
+/* .dropdown-content a {
     gap: 15px;
     margin: auto;
     font-size: medium;
-}
-
-/* .navlinks.active .dropdown-content a:hover{
-    background-color: transparent;
-    color: #0C0C1E;
 } */
-
-/* font-family: castellar;  */
 
 #aboutus {
     font-family: algerian;
@@ -174,9 +164,6 @@ a:hover {
     position: relative;
     text-align: center;
     overflow: hidden;
-    /* z-index: initial; */
-    /* margin-top: 3.125rem; */
-    
 }
 
 .hero::before {
@@ -242,7 +229,7 @@ section.about h2 {
 
 section.about p {
     font-size: 1.1rem;
-    color: #666;
+    /* color: #666; */
     max-width: 50rem;
     margin: auto;
 }
@@ -380,25 +367,27 @@ footer {
 /* RESPONSIVENESS ADJUSTMENT */
 @media (max-width : 768px) {
     :root {
-    --font-size-heading: 2rem;
-    --font-size-body: 0.9rem;
-    --spacing: 12px;
+        --font-size-heading: 2rem;
+        --font-size-body: 0.9rem;
+        --spacing: 12px;
     }
 }
 
 @media (max-width: 480px) {
     :root {
-    --font-size-heading: 1.5rem;
-    --font-size-body: 0.8rem;
-    --spacing: 10px;
+        --font-size-heading: 1.5rem;
+        --font-size-body: 0.8rem;
+        --spacing: 10px;
     }
 }
 
 /* Tablets */
 @media (max-width: 768px) {
     .hero {
-        height: 100vh; /* fill screen but not too tall */
+        height: 100vh;
+        /* fill screen but not too tall */
     }
+
     .hero-content {
         transform: translateY(-40px);
     }
@@ -407,12 +396,15 @@ footer {
 /* Small phones */
 @media (max-width: 480px) {
     .hero {
-        height: 90vh; /* slightly shorter */
+        height: 90vh;
+        /* slightly shorter */
     }
+
     .hero-content {
         transform: translateY(-20px);
     }
-    .cla{
+
+    .cla {
         z-index: 10;
     }
 }
@@ -449,25 +441,50 @@ footer {
         cursor: pointer;
     }
 
-  .heading {
+    .heading {
         flex: 1;
         text-align: center;
         font-size: 150%;
     }
 }
 
-/* responsiveness
-
-/* For tablets and smaller 
+/* =========================
+   MOBILE / HAMBURGER DROPDOWN
+   ========================= */
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
+    .navlinks {
+        display: none;
+        flex-direction: column;
+        background: rgba(249, 248, 248, 0.95);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        z-index: 15;
+    }
+
+    .navlinks.active {
+        display: flex;
+    }
+
+    /* Dropdown inside hamburger */
+    .dropdown-content {
+        position: static;
+        /* stack inside mobile menu */
+        box-shadow: none;
+        background: transparent;
+        padding: 0.5rem 0;
+    }
+
+    .dropdown-content a {
+        padding: 0.5rem 0;
+        margin: 0;
+    }
+
+    .dropdown-content.show {
+        display: block;
+    }
 }
 
-/* For phones 
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-} */
+
