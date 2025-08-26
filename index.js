@@ -49,15 +49,67 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // ✅ Handle form submit button
-  const submitButton = document.getElementById("btn");
-  if (submitButton) {
-    submitButton.addEventListener("click", function (event) {
-      event.preventDefault();
-      console.log("Submit button clicked!");
-      alert("Thanks contacting AYINKE_STITCHES Form submitted successfully!");
-    });
-  }
-});
+  });
+
+  // Get the form element by its ID
+const form = document.getElementById("enquiry-form");
+
+// Get the placeholder <p> tag where messages will be shown
+const message = document.getElementById("formMessage");
+
+// Check if the form actually exists on the page (good practice to avoid errors)
+if (form) {
+  // Add a "submit" event listener to the form
+  form.addEventListener("submit", async function (event) {
+    // Prevent the form's default behavior (refreshing the page)
+    event.preventDefault();
+
+    // Collect all the input values from the form
+    const formData = new FormData(form);
+
+    try {
+      // Send form data to the server (Formspree) using fetch
+      const response = await fetch(form.action, {
+        method: form.method, // Uses the method defined in <form> (POST)
+        body: formData,      // Sends the collected form data
+        headers: {
+          'Accept': 'application/json' // Tell Formspree we want JSON response
+        }
+      });
+
+      // If the request was successful (status 200)
+      if (response.ok) {
+        // Show a green success message
+        message.style.display = "block";
+        message.style.color = "green";
+        message.textContent = "Form submitted successfully! 🎉";
+
+        // Clear all input fields in the form
+        form.reset();
+
+        // Hide the success message after 3 seconds
+        setTimeout(() => {
+          message.style.display = "none";
+        }, 3000);
+      } else {
+        // If Formspree didn't accept submission, show error in red
+        message.style.display = "block";
+        message.style.color = "red";
+        message.textContent = "Oops! Something went wrong.";
+      }
+    } catch (error) {
+      // If there was a network/connection problem, show error in red
+      message.style.display = "block";
+      message.style.color = "red";
+      message.textContent = "Network error. Please try again.";
+    }
+  });
+}
+
+ 
+
+  
+
+
 
 

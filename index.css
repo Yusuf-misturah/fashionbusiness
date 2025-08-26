@@ -3,13 +3,13 @@
     margin: 0;
     padding: 0;
 }
-
+/* styling my root element */
 :root {
     --font-size-heading: 2.5rem;
     --font-size-body: 1rem;
     --spacing: 1rem;
 }
-
+/* body styling */
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -17,12 +17,13 @@ body {
     color: #333;
 
 }
-
+/* logo style */
 .logo {
     width: 6.25rem;
     border-radius: 1.875rem 1.5625rem;
 }
 
+/* brandname styling */
 .heading {
     text-align: center;
     font-family: algerian;
@@ -31,6 +32,7 @@ body {
     color: #1b2e3c;
 }
 
+/* header styling */
 .nav {
     background-color: rgb(243, 243, 243);
     position: sticky;
@@ -41,6 +43,7 @@ body {
     padding-right: 20px;
 }
 
+/* nav styling */
 .navbar {
     display: flex;
     flex-direction: row;
@@ -50,6 +53,7 @@ body {
     position: relative;
 }
 
+/* ul styling */
 .navlinks {
     display: flex;
     flex-direction: row;
@@ -59,17 +63,19 @@ body {
     color: #1b2e3c;
 }
 
+/* anchor styling */
 a {
     text-decoration: none;
     color: #1b2e3c;
 }
 
+/* anchor hover styling */
 a:hover {
     background-color: rgb(249, 248, 248);
     color: #0C0C1E;
 }
 
-
+/* DROPDOWN SECTIONS */
 /* how your link will come out */
 .spa {
     border: none;
@@ -99,7 +105,7 @@ a:hover {
     display: block;
     background-color: #f9f8f8e4;
 }
-
+/* how dropdown content will display */
 .dropdown-content a {
     display: block;
     margin-bottom: 0.5rem;
@@ -110,6 +116,7 @@ a:hover {
     display: block;
 }
 
+/* hamburger style */
 .hamburger {
     display: none;
     font-size: 1.75rem;
@@ -121,29 +128,7 @@ a:hover {
     margin-top: 0.625rem;
 }
 
-/* .dropdown-content {
-    position: static;
-    box-shadow: none;
-    padding: 0.5rem 1rem;
-} */
-
-/* change the b'c and color of the dropdown span when the dropdown content is shown 
-.dropdown:hover .spa {
-    color: rgb(45, 43, 43);
-    border: none;
-}
-
-/* change color of dropdown links on hover 
-.dropdown-content a:hover {
-    background-color: #f9f8f8e4;
-} */
-
-/* .dropdown-content a {
-    gap: 15px;
-    margin: auto;
-    font-size: medium;
-} */
-
+/* button on landing page, takes down to about the brand*/
 #aboutus {
     font-family: algerian;
     text-align: center;
@@ -152,6 +137,7 @@ a:hover {
 
 /*  */
 
+/* background img appearance */
 .hero {
     background-image: url(images/owanbe6.jpg);
     background-size: cover;
@@ -166,6 +152,7 @@ a:hover {
     overflow: hidden;
 }
 
+/* landing page display before */
 .hero::before {
     content: "";
     position: absolute;
@@ -317,7 +304,7 @@ footer {
     margin-top: 3.125rem;
 }
 
-/* styling my external pages */
+/* gallery heading fonts */
 .cla {
     text-align: center;
     font-family: monospace;
@@ -329,8 +316,7 @@ footer {
 
 .gallery {
     padding: 2rem;
-    /* margin-top: 3.125rem;
-    margin-bottom: 3.125rem; */
+
 }
 
 .fig {
@@ -338,8 +324,6 @@ footer {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    /* flex-direction: row; 
-    margin-bottom: 1.25rem;*/
 }
 
 .img-cont {

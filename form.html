@@ -88,6 +88,7 @@
 }
 
 
+
     </style>
 
 </head>
@@ -127,7 +128,9 @@
 <section class="sec1">
   <div class="form-card">
     <h3 style="color: #0c001e;">ENQUIRY FORM</h3>
-    <form id="enquiry-form">
+    <form id="enquiry-form" 
+    action="https://formspree.io/f/xnnbqbny"
+    method="POST">
       <div class="form-group">
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Enter first name" required>
@@ -205,6 +208,11 @@
         <label for="information">Additional Information</label>
         <textarea id="information" name="information" placeholder="Any other details..." rows="4"></textarea>
       </div>
+
+<p id="formMessage" class="form-message">
+  <!-- Form submitted successfully! -->
+</p>
+
 
       <button type="submit" id="btn">Submit</button>
     </form>
