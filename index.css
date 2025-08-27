@@ -329,7 +329,7 @@ footer {
 .img-cont {
     flex: 1 1 200px;
     max-width: 250px;
-    /* margin-right: 1.25rem; */
+ 
 }
 
 .img {
@@ -338,10 +338,7 @@ footer {
     border-radius: 5px;
     height: 15.625rem;
     object-fit: cover;
-    /* border: 0.125rem solid #1b2e3c;
-    max-width: 15.625rem;
-    height: 15.625rem;
-    object-fit: cover; */
+
 }
 
 .img:hover {
