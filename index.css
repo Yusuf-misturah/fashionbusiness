@@ -26,7 +26,7 @@ body {
 /* brandname styling */
 .heading {
     text-align: center;
-    font-family: algerian;
+    font-family: 'Playfair Display', serif;
     font-style: oblique;
     font-size: 200%;
     color: #1b2e3c;
@@ -261,14 +261,17 @@ section.about p {
 
 .social-btn.instagram {
     background-color: #f3e3e2;
+    color: #fff;
 }
 
 .social-btn.whatsapp {
     background-color: green;
+    color: #fff;
 }
 
-.social-btn.linkedin {
-    background-color: #0077b5;
+.social-btn.tiktok {
+    background-color: #000;
+    color: #fff;
 }
 
 .pics {
@@ -286,7 +289,7 @@ section.about p {
     /* Make the links appear below each other instead of side-by-side */
     text-align: center;
     /* Center-align text */
-    padding: 1.25rem;
+    padding: 0.65rem;
     /* Add some padding */
     transition: all 0.3s ease;
     /* Add transition for hover effects */
@@ -310,7 +313,7 @@ footer {
     font-family: monospace;
     font-size: calc(6.5vw);
     color: #1b2e3c;
-    margin-bottom: 3.125rem;
+    margin-bottom: 10px;
     z-index: 10;
 }
 
@@ -396,7 +399,7 @@ footer {
     .navbar {
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 1rem;
+        /* padding: 0.625rem; */
     }
 
 
@@ -409,7 +412,7 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        padding: 1rem;
+        padding: 0.625rem;
         /* z-index: 1000; */
     }
 
@@ -427,13 +430,30 @@ footer {
         text-align: center;
         font-size: 150%;
     }
+
+        .dropdown-content {
+        position: static;
+        /* stack inside mobile menu */
+        box-shadow: none;
+        background: transparent;
+        /* padding: 0.5rem 0; */
+    }
+
+    .dropdown-content a {
+        /* padding: 0.5rem 0; */
+        margin: 0;
+    }
+
+    .dropdown-content.show {
+        display: block;
+    }
 }
 
 /* =========================
    MOBILE / HAMBURGER DROPDOWN
-   ========================= */
+   ========================= 
 @media (max-width: 768px) {
-    .navlinks {
+  /*  .navlinks {
         display: none;
         flex-direction: column;
         background: rgba(249, 248, 248, 0.95);
@@ -443,29 +463,14 @@ footer {
         width: 100%;
         padding: 1rem;
         z-index: 15;
-    }
+    } 
 
     .navlinks.active {
         display: flex;
     }
 
-    /* Dropdown inside hamburger */
-    .dropdown-content {
-        position: static;
-        /* stack inside mobile menu */
-        box-shadow: none;
-        background: transparent;
-        padding: 0.5rem 0;
-    }
+    /* Dropdown inside hamburger 
 
-    .dropdown-content a {
-        padding: 0.5rem 0;
-        margin: 0;
-    }
-
-    .dropdown-content.show {
-        display: block;
-    }
-}
+} */
 
 
